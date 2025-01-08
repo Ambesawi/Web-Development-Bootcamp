@@ -1,6 +1,3 @@
-# Web-Development-Bootcamp
-This is my Web Development Bootcamp repo
-
 # The Complete Web Development Bootcamp
 
 Welcome to the repository for projects and assignments completed during **The Complete Web Development Bootcamp**, taught by **Dr. Angela Yu**. This repository documents my learning journey and showcases the skills and projects developed throughout the bootcamp.
