@@ -111,5 +111,5 @@ This repository is licensed under the [MIT License](LICENSE). Feel free to use t
 ## Contact
 For questions or collaboration opportunities, feel free to reach out:
 - **Email**: your.ambesawi@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile]([https://www.linkedin.com/in/yourprofile](https://www.linkedin.com/in/aman-brhane-610292233/)
-- **GitHub**: [Your GitHub Profile](https://github.com/Ambesawi)
+- **LinkedIn**: [Aman Brhane]([https://www.linkedin.com/in/yourprofile](https://www.linkedin.com/in/aman-brhane-610292233/)
+- **GitHub**: [Ambesawi](https://github.com/Ambesawi)
