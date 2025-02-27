@@ -1,0 +1,24 @@
+html {
+    background-color: black;
+}
+
+#aman {
+  
+    border-color:  wheat;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 100px;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+}
+#aman1 {
+    border: 5px solid white;
+  width: 100%;
+}
+#aman2 {
+    color: white;
+}
+
+#aman3 {
+    color: white;
+}
