@@ -10,3 +10,31 @@ p {
   margin: 0;
   padding: 0;
 }
+div {
+  padding: 10px;
+}
+
+p {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  padding: 10px;
+  background-color: blue;
+}
+
+#outer-box {
+  padding: 10px;
+  background-color: purple;
+}
+
+.inner-box {
+  background-color: red;
+}
+
+.white-text {
+  background-color: red;
+  color: white;
+}
