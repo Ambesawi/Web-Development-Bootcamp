@@ -6,3 +6,7 @@ h1, h2 {
 .box > p {
     color: firebrick;
 }
+
+.box .list {
+    color: blue;
+}
