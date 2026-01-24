@@ -3,12 +3,12 @@ function getMilk(money) {
     console.log("moveRight");
 
     console.log("buy " + calcBottles(money, 1.5) + " bottles of milk");
-    // console.log("buy " + numberOfBottles + "bottles of milk");
+    //console.log("buy " + numberOfBottles + "bottles of milk");
 
     console.log("moveRight");
     console.log("enterHouse");
 
-    return money % 1.5; //Reminder of this division
+    return calcChang(money, 1.5);
 
 }
 
@@ -18,4 +18,9 @@ function calcBottles(startingMony, costPerBottles) {
     return numberOfBottles;
 }
 
-getMilk(4);
+function calcChang(startingAmount, costPerBottles) {
+    var chang = startingAmount % calcBottles;
+    return chang;
+}
+
+console.log("hello master , her is your " + getMilk() + " change");
