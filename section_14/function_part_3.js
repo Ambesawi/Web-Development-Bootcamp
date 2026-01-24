@@ -19,7 +19,7 @@ function calcBottles(startingMony, costPerBottles) {
 }
 
 function calcChang(startingAmount, costPerBottles) {
-    var chang = startingAmount % calcBottles;
+    var chang = startingAmount % costPerBottles;
     return chang;
 }
 
