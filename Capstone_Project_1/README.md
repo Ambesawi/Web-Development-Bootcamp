@@ -29,17 +29,5 @@ The project involves creating an online resume as a multi-page website with the 
   - Your name
   - Copyright or disclaimers
 
-### 3. **Deployment**
-- Save the `index.html` file and preview it in a web browser.
-- Host the project on GitHub and publish using **GitHub Pages**.
-- Share your hosted project link to gather feedback and suggestions.
 
----
-
-## 🚀 Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/capstone-online-resume.git
-   cd capstone-online-resume
 
