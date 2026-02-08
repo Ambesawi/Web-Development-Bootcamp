@@ -1,4 +1,3 @@
-
 // this id for randomly genarationg of tie numbers from 1 to 6
 randomNumber1 = Math.floor(Math.random() * 6) + 1;
 randomNumber2 = Math.floor(Math.random() * 6) + 1;
