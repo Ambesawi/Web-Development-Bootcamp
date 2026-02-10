@@ -7,5 +7,8 @@ function HouseKeeper(yearsOfExperience, name, cleaningRepetoire){
     }
 }
 
-// crate a new object and call the cleaning mathed using dot notation
-HouseKeeper.clean();
+// crate a new object 
+var houseKeeper1 = new HouseKeeper(12, "tinna", ["room"]);
+
+// and call the cleaning mathed using dot notation
+houseKeeper1.clean();
