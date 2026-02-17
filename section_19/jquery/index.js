@@ -18,6 +18,11 @@
 // });
 
 // using keypress changing the h1 contrnt with the keystok of the keybord 
-$(document).keypress(function(event) {
-    $("h1").text(event.key);
-});
+// $(document).keypress(function(event) {
+//     $("h1").text(event.key);
+// });
+
+//using onmouse over
+$("h1").on("mouseover", function(){
+    $("h1").css("color", "purple")
+}); 
