@@ -5,6 +5,9 @@ var gamePattern = [];
 // Available button colours (match HTML button IDs)
 var buttonColours = ["red", "blue", "green", "yellow"];
 
+/*********************************************************************/
+/* Start the game when any key is pressed                            */
+/*********************************************************************/
 
 // Start game when any key is pressed
 $(document).keypress(function () {
@@ -36,3 +39,27 @@ function nextSequence() {
     var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
     audio.play();
 }
+
+/*********************************************************************/
+/* User Click Detection Logic                                        */
+/*********************************************************************/
+
+// Store the colours clicked by the user
+var userClickedPattern = [];
+
+
+// Detect when any button with class "btn" is clicked
+$(".btn").click(function () {
+
+    // 1 Get the id of the clicked button
+    // "this" refers to the button that was clicked
+    // Example: if green button clicked → "green"
+    var userChosenColour = $(this).attr("id");
+
+    // 2 Add the clicked colour to userClickedPattern array
+    userClickedPattern.push(userChosenColour);
+
+    // Debug: check if pattern builds correctly
+    console.log(userClickedPattern);
+
+});
