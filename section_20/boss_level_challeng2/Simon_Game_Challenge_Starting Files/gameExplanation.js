@@ -96,3 +96,27 @@ function nextSequence() {
     var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
     audio.play();
 }
+
+/*********************************************************************/
+/* User Click Detection Logic                                        */
+/*********************************************************************/
+
+// Store the colours clicked by the user
+var userClickedPattern = [];
+
+
+// Detect when any button with class "btn" is clicked
+$(".btn").click(function () {
+
+    // 1️⃣ Get the id of the clicked button
+    // "this" refers to the button that was clicked
+    // Example: if green button clicked → "green"
+    var userChosenColour = $(this).attr("id");
+
+    // 2️⃣ Add the clicked colour to userClickedPattern array
+    userClickedPattern.push(userChosenColour);
+
+    // Debug: check if pattern builds correctly
+    console.log(userClickedPattern);
+
+});
