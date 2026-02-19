@@ -35,9 +35,12 @@ function nextSequence() {
     // Use Google/Stackoverflow to figure out how you can use jQuery to animate a flash to the button selected in step 1.
     $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
 
+    // Play sound using same function
+    playSound(randomChosenColour);
+
     // 5 Play matching sound
-    var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
-    audio.play();
+    // var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+    // audio.play();
 }
 
 /*********************************************************************/
@@ -62,4 +65,50 @@ $(".btn").click(function () {
     // Debug: check if pattern builds correctly
     console.log(userClickedPattern);
 
+    //  Play sound using same function
+    playSound(userChosenColour);
+
+    //  Add button press animation
+    animatePress(userChosenColour);
+
 });
+
+
+/*********************************************************************/
+/* Function: playSound(name)                                         */
+/* Purpose: Play sound based on button colour                        */
+/*********************************************************************/
+
+function playSound(name) {
+
+    // Build the file path dynamically
+    // Example: name = "green"
+    // → "sounds/green.mp3"
+    var audio = new Audio("sounds/" + name + ".mp3");
+
+    // Play the sound
+    audio.play();
+}
+
+/*********************************************************************/
+/* Function: animatePress(currentColour)                             */
+/* Purpose: Add "pressed" effect to clicked button briefly           */
+/*********************************************************************/
+
+function animatePress(currentColour) {
+    // Add Debug Log Inside animatePress()
+    console.log("Animating:", currentColour);
+    
+    // Select the button using its id
+    // Example: currentColour = "green"
+    // → $("#green")
+    $("#" + currentColour).addClass("pressed");
+
+    // Remove the class after 100 milliseconds
+    // setTimeout runs a function after a delay
+    setTimeout(function () {
+
+        $("#" + currentColour).removeClass("pressed");
+
+    }, 100); // 100ms delay
+}
