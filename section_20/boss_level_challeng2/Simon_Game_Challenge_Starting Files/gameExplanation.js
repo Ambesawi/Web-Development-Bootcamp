@@ -86,6 +86,9 @@ function nextSequence() {
         .fadeIn(100);
 
 
+    // Play sound using reusable function
+    playSound(randomChosenColour);
+
     // -------------------------------------------------------------
     // STEP 5: Play the sound for that button
     // It dynamically builds the file path:
@@ -93,8 +96,8 @@ function nextSequence() {
     // "sounds/red.mp3"
     // "sounds/blue.mp3"
     // -------------------------------------------------------------
-    var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
-    audio.play();
+    // var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+    // audio.play();
 }
 
 /*********************************************************************/
@@ -108,15 +111,61 @@ var userClickedPattern = [];
 // Detect when any button with class "btn" is clicked
 $(".btn").click(function () {
 
-    // 1️⃣ Get the id of the clicked button
+    // 1 Get the id of the clicked button
     // "this" refers to the button that was clicked
     // Example: if green button clicked → "green"
     var userChosenColour = $(this).attr("id");
 
-    // 2️⃣ Add the clicked colour to userClickedPattern array
+    // 2 Add the clicked colour to userClickedPattern array
     userClickedPattern.push(userChosenColour);
+
+    // Play sound using same function
+    playSound(userChosenColour);
 
     // Debug: check if pattern builds correctly
     console.log(userClickedPattern);
 
+    //  Add button press animation
+    animatePress(userChosenColour);
+
 });
+
+
+/*********************************************************************/
+/* Function: playSound(name)                                         */
+/* Purpose: Play sound based on button colour                        */
+/*********************************************************************/
+
+function playSound(name) {
+
+    // Build the file path dynamically
+    // Example: name = "green"
+    // → "sounds/green.mp3"
+    var audio = new Audio("sounds/" + name + ".mp3");
+
+    // Play the sound
+    audio.play();
+}
+
+/*********************************************************************/
+/* Function: animatePress(currentColour)                             */
+/* Purpose: Add "pressed" effect to clicked button briefly           */
+/*********************************************************************/
+
+function animatePress(currentColour) {
+    // Add Debug Log Inside animatePress()
+    console.log("Animating:", currentColour);
+
+    // Select the button using its id
+    // Example: currentColour = "green"
+    // → $("#green")
+    $("#" + currentColour).addClass("pressed");
+
+    // Remove the class after 100 milliseconds
+    // setTimeout runs a function after a delay
+    setTimeout(function () {
+
+        $("#" + currentColour).removeClass("pressed");
+
+    }, 100); // 100ms delay
+}
