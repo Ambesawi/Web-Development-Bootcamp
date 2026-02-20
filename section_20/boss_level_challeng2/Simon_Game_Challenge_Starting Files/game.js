@@ -6,16 +6,38 @@ var gamePattern = [];
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 /*********************************************************************/
-/* Start the game when any key is pressed                            */
+/* Game Start + Level System                                         */
 /*********************************************************************/
 
-// Start game when any key is pressed
-$(document).keypress(function () {
-    nextSequence();
+// Track game state
+var started = false;   // To make sure game starts only once
+var level = 0;         // Game level starts at 0
+
+
+// Detect first keypress to start game
+$(document).keydown(function () {
+
+    // If game hasn't started yet
+    if (!started) {
+
+        $("#level-title").text("Level " + level);
+
+        nextSequence();
+
+        started = true; // Prevent restarting on every key press
+    }
+
 });
 
 
+
 function nextSequence() {
+
+    // Increase level each time new sequence is generated
+    level++;
+
+    // Update the h1 text with new level
+    $("#level-title").text("Level " + level);
 
     // 1 Generate random number (0–3)
     // Math.random() → 0–3.999 → Math.floor() → 0,1,2,3
@@ -98,7 +120,7 @@ function playSound(name) {
 function animatePress(currentColour) {
     // Add Debug Log Inside animatePress()
     console.log("Animating:", currentColour);
-    
+
     // Select the button using its id
     // Example: currentColour = "green"
     // → $("#green")
