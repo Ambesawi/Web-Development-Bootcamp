@@ -15,14 +15,27 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 
 
 /*********************************************************************/
-/* Start the game when any key is pressed                            */
+/* Game Start + Level System                                         */
 /*********************************************************************/
 
-// jQuery event listener attached to the entire document.
-// When the user presses any key on the keyboard,
-// the function nextSequence() will run.
-$(document).keypress(function () {
-    nextSequence();
+// Track game state
+var started = false;   // To make sure game starts only once
+var level = 0;         // Game level starts at 0
+
+
+// Detect first keypress to start game
+$(document).keydown(function () {
+
+    // If game hasn't started yet
+    if (!started) {
+
+        $("#level-title").text("Level " + level);
+
+        nextSequence();
+
+        started = true; // Prevent restarting on every key press
+    }
+
 });
 
 
@@ -38,6 +51,12 @@ $(document).keypress(function () {
 /*********************************************************************/
 
 function nextSequence() {
+
+    // Increase level each time new sequence is generated
+    level++;
+
+    // Update the h1 text with new level
+    $("#level-title").text("Level " + level);
 
     // -------------------------------------------------------------
     // STEP 1: Generate a random number between 0 and 3
