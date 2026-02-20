@@ -215,7 +215,26 @@ function checkAnswer(currentLevel) {
             }, 1000);
         }
     } else {
-        console.log("Wrong"); // Debugging
-        gameOver();
+        playSound("wrong");
+
+        $("body").addClass("game-over");
+
+        setTimeout(function () {
+            $("body").removeClass("game-over");
+        }, 200);
+
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        startOver();
     }
+}
+
+/*********************************************************************/
+/* Function: startOver()                           */
+/* Purpose: this function helps to star from the beigning like level 1    */
+/*********************************************************************/
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    started = false;
 }
