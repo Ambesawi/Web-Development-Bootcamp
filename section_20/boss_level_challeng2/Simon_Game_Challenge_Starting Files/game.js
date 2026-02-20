@@ -159,13 +159,33 @@ function checkAnswer(currentLevel) {
         // Check if the user has finished the current sequence
         if (userClickedPattern.length === gamePattern.length) {
             // User completed sequence correctly
-            setTimeout(function() {
+            setTimeout(function () {
                 userClickedPattern = []; // Reset user input for next level
                 nextSequence(); // Go to next level
             }, 1000);
         }
     } else {
-        console.log("Wrong"); // Debugging
-        gameOver();
+        playSound("wrong");
+
+        $("body").addClass("game-over");
+
+        setTimeout(function () {
+            $("body").removeClass("game-over");
+        }, 200);
+
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        startOver();
     }
 }
+
+/*********************************************************************/
+/* Function: startOver()                           */
+/* Purpose: this function helps to star from the beigning like level 1    */
+/*********************************************************************/
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    started = false;
+}
+
