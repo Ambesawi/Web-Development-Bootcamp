@@ -24,7 +24,7 @@ var level = 0;         // Game level starts at 0
 
 
 // Detect first keypress to start game
-$(document).keydown(function () {
+$(document).keypress(function () {
 
     // If game hasn't started yet
     if (!started) {
@@ -147,6 +147,9 @@ $(".btn").click(function () {
     //  Add button press animation
     animatePress(userChosenColour);
 
+    // Pass index of last click to checkAnswer
+    checkAnswer(userClickedPattern.length - 1);
+
 });
 
 
@@ -187,4 +190,32 @@ function animatePress(currentColour) {
         $("#" + currentColour).removeClass("pressed");
 
     }, 100); // 100ms delay
+}
+
+
+
+/*********************************************************************/
+/* Function: checkAnswer(currentLevel)                             */
+/* Purpose: to compare the user’s input to the game pattern.          */
+/*********************************************************************/
+
+function checkAnswer(currentLevel) {
+    // Check if the last user click matches the game pattern
+    if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+        console.log("Success"); // Debugging
+        console.log("User Pattern:", userClickedPattern);
+        console.log("Game Pattern:", gamePattern);
+
+        // Check if the user has finished the current sequence
+        if (userClickedPattern.length === gamePattern.length) {
+            // User completed sequence correctly
+            setTimeout(function() {
+                userClickedPattern = []; // Reset user input for next level
+                nextSequence(); // Go to next level
+            }, 1000);
+        }
+    } else {
+        console.log("Wrong"); // Debugging
+        gameOver();
+    }
 }
