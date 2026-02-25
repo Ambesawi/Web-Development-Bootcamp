@@ -52,17 +52,17 @@ Now you can type JavaScript:
 
 ### Example Commands
 
-    ``` js
+``` js
     console.log("Hello Aman");
     let name = "Aman";
     name.toUpperCase();
-    ```
+```
 
     You can even load modules:
 
-    ``` js
+``` js
     const fs = require("fs");
-    ```
+```
 
     ------------------------------------------------------------------------
 
@@ -74,17 +74,17 @@ Now you can type JavaScript:
 
     Shows all available REPL commands.
 
-    ``` bash
+``` bash
     .help
-    ```
+```
 
 ### .exit
 
     Exits REPL safely.
 
-    ``` bash
+``` bash
     .exit
-    ```
+```
 
 ### .clear
 
@@ -118,16 +118,14 @@ Now you can type JavaScript:
                 app.js
 
                 Inside the file:
-
-                ``` js
+``` js
                 console.log("Hello from Node");
-                ```
+```
 
                 Run it with:
-
-                ``` bash
+``` bash
                 node app.js
-                ```
+```
 
                 ------------------------------------------------------------------------
 
@@ -137,35 +135,35 @@ Now you can type JavaScript:
 
 ### Show current directory
 
-                ``` bash
+``` bash
                 pwd
-                ```
+```
 
 ### List files
 
                 Mac/Linux:
 
-                ``` bash
+``` bash
                 ls
-                ```
+```
 
                 Windows:
 
-                ``` bash
+``` bash
                 dir
-                ```
+```
 
 ### Go into folder
 
-                ``` bash
+``` bash
                 cd foldername
-                ```
+```
 
 ### Go back one folder
 
-                ``` bash
+``` bash
                 cd ..
-                ```
+```
 
                 ------------------------------------------------------------------------
 
@@ -176,21 +174,21 @@ Now you can type JavaScript:
                 3.  Open terminal
                 4.  Run file with:
 
-                ``` bash
+``` bash
                 node app.js
-                ```
+```
 
                 5.  Initialize npm:
 
-                ``` bash
+``` bash
                 npm init
-                ```
+```
 
                 6.  Install packages:
 
-                ``` bash
+``` bash
                 npm install express
-                ```
+```
 
                 ------------------------------------------------------------------------
 
