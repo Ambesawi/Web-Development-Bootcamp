@@ -22,8 +22,8 @@ It is:
 -   The largest software registry in the world
 -   A tool used to install and manage JavaScript libraries (packages)
 
-If Node.js is the engine íº—\
-NPM is the App Store í¿ª
+If Node.js is the engine ï¿½ï¿½ï¿½\
+NPM is the App Store ï¿½ï¿½ï¿½
 
 ------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ This creates a file called:
 
     ------------------------------------------------------------------------
 
-    ## 5. What Is package.json?
+## 5. What Is package.json?
 
     `package.json` is your project's identity card.
 
@@ -100,7 +100,7 @@ This creates a file called:
 
     Example:
 
-    ``` json
+``` json
     {
       "name": "my-project",
         "version": "1.0.0",
@@ -108,17 +108,17 @@ This creates a file called:
               "express": "^4.18.2"
                 }
                 }
-                ```
+```
 
                 ------------------------------------------------------------------------
 
-                ## 6. What Happens When You Install a Package?
+## 6. What Happens When You Install a Package?
 
                 When you run:
 
-                ``` bash
+``` bash
                 npm install express
-                ```
+```
 
                 Three things happen:
 
@@ -128,31 +128,31 @@ This creates a file called:
 
                 ------------------------------------------------------------------------
 
-                ## 7. Important Files Explained
+## 7. Important Files Explained
 
-                ### node_modules/
+### node_modules/
 
                 Contains all installed packages.
 
-                ### package.json
+### package.json
 
                 Lists dependencies and project info.
 
-                ### package-lock.json
+### package-lock.json
 
                 Locks exact package versions to ensure consistent installs.
 
                 ------------------------------------------------------------------------
 
-                ## 8. Why package.json Is Important
+## 8. Why package.json Is Important
 
                 When someone downloads your project, they don't need all node_modules.
 
                 They simply run:
 
-                ``` bash
+``` bash
                 npm install
-                ```
+```
 
                 NPM reads package.json and installs everything automatically.
 
@@ -160,41 +160,41 @@ This creates a file called:
 
                 ------------------------------------------------------------------------
 
-                ## 9. Difference Between Node.js and NPM
+## 9. Difference Between Node.js and NPM
 
                   Node.js                           NPM
                     --------------------------------- ----------------------
-                      Runs JavaScript outside browser   Installs packages
-                        Runtime environment               Package manager
-                          Executes files                    Manages dependencies
+                Runs JavaScript outside browser   Installs packages
+                Runtime environment               Package manager
+                Executes files                    Manages dependencies
 
                           ------------------------------------------------------------------------
 
-                          ## 10. Typical Backend Workflow
+## 10. Typical Backend Workflow
 
                           1.  Create project folder
                           2.  Open in VS Code
                           3.  Initialize npm:
 
-                          ``` bash
+``` bash
                           npm init -y
-                          ```
+```
 
                           4.  Install dependencies:
 
-                          ``` bash
+``` bash
                           npm install express
-                          ```
+```
 
                           5.  Use the package in your file:
 
-                          ``` js
+``` js
                           const express = require("express");
-                          ```
+```
 
                           ------------------------------------------------------------------------
 
-                          ## 11. Pro Tips
+## 11. Pro Tips
 
                           -   Always run `npm init` at the beginning of every backend project.
                           -   Avoid installing packages globally unless necessary.
@@ -203,5 +203,71 @@ This creates a file called:
 
                           ------------------------------------------------------------------------
 
-                          End of Guide
+### Using .gitignore in Node.js Projects
+
+This section explains how to use .gitignore in your Node.js projects to prevent unwanted files from being tracked by Git.
+
+## What Is .gitignore?
+
+.gitignore is a file that tells Git which files or folders it should ignore and not track in version control.
+
+This is useful for:
+
+node_modules/ folder (very large)
+
+.env files (sensitive data like API keys)
+
+Logs and temporary files
+
+## How To Create .gitignore
+
+In your project folder, create a new file named:
+```
+.gitignore
+```
+Add the following for a basic Node.js project:
+
+```
+node_modules/
+.env
+.env.local
+.DS_Store
+*.log
+```
+## Why This Matters
+
+Keeps your repository clean
+
+Reduces upload size to GitHub
+
+Protects sensitive data
+
+Allows others to install dependencies with npm install
+
+## Checking if .gitignore Works
+
+After creating .gitignore, run:
+```
+git status
+```
+You should not see the ignored files/folders listed.
+
+## Removing Already Tracked Files
+
+If you previously committed files that should be ignored:
+```
+git rm -r --cached node_modules
+```
+Then commit the changes:
+```
+git commit -m "Removed node_modules from tracking"
+```
+## Summary
+
+For Node.js projects, at minimum your .gitignore should contain:
+```
+node_modules/
+.env
+```
+This ensures best practices and a professional workflow for Node.js development.
 
