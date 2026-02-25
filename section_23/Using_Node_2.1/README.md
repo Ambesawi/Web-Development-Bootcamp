@@ -43,7 +43,7 @@ Now you can type JavaScript:
     ------------------------------------------------------------------------   
 ```
 
-    ## 2. How to Use Node REPL
+## 2. How to Use Node REPL
 
     ### Start REPL
 
