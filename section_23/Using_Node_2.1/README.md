@@ -45,13 +45,13 @@ Now you can type JavaScript:
 
 ## 2. How to Use Node REPL
 
-    ### Start REPL
+### Start REPL
 
     ``` bash
     node
     ```
 
-    ### Example Commands
+### Example Commands
 
     ``` js
     console.log("Hello Aman");
@@ -67,11 +67,11 @@ Now you can type JavaScript:
 
     ------------------------------------------------------------------------
 
-    ## 3. Special REPL Commands
+## 3. Special REPL Commands
 
     Commands starting with a dot (`.`):
 
-    ### .help
+### .help
 
     Shows all available REPL commands.
 
@@ -79,7 +79,7 @@ Now you can type JavaScript:
     .help
     ```
 
-    ### .exit
+### .exit
 
     Exits REPL safely.
 
@@ -87,21 +87,21 @@ Now you can type JavaScript:
     .exit
     ```
 
-    ### .clear
+### .clear
 
     Clears the REPL environment.
 
-    ### .save filename.js
+### .save filename.js
 
     Saves current REPL session to a file.
 
-    ### .load filename.js
+### .load filename.js
 
     Loads a file into REPL.
 
     ------------------------------------------------------------------------
 
-    ## 4. Ctrl + C (Important)
+## 4. Ctrl + C (Important)
 
     In most command line interfaces:
 
@@ -132,17 +132,17 @@ Now you can type JavaScript:
 
                 ------------------------------------------------------------------------
 
-                ## 6. Navigating Folders in VS Code Terminal
+## 6. Navigating Folders in VS Code Terminal
 
                 Open terminal in VS Code: - Terminal → New Terminal
 
-                ### Show current directory
+### Show current directory
 
                 ``` bash
                 pwd
                 ```
 
-                ### List files
+### List files
 
                 Mac/Linux:
 
@@ -156,13 +156,13 @@ Now you can type JavaScript:
                 dir
                 ```
 
-                ### Go into folder
+### Go into folder
 
                 ``` bash
                 cd foldername
                 ```
 
-                ### Go back one folder
+### Go back one folder
 
                 ``` bash
                 cd ..
@@ -170,7 +170,7 @@ Now you can type JavaScript:
 
                 ------------------------------------------------------------------------
 
-                ## 7. Typical Node Workflow
+## 7. Typical Node Workflow
 
                 1.  Create project folder
                 2.  Open in VS Code
@@ -195,7 +195,7 @@ Now you can type JavaScript:
 
                 ------------------------------------------------------------------------
 
-                ## REPL vs Running a File
+## REPL vs Running a File
 
                   REPL                     Running File
                     ------------------------ --------------------
@@ -205,7 +205,7 @@ Now you can type JavaScript:
 
                           ------------------------------------------------------------------------
 
-                          ## When to Use What
+## When to Use What
 
                           Use REPL for: - Testing small JavaScript code - Learning Node basics -
                           Quick experiments
