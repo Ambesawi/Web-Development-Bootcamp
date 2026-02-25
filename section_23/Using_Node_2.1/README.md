@@ -46,9 +46,9 @@ Now you can type JavaScript:
 
 ### Start REPL
 
-    ``` bash
+``` bash
     node
-    ```
+```
 
 ### Example Commands
 
