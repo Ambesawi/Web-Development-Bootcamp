@@ -112,7 +112,7 @@ Now you can type JavaScript:
 
             ------------------------------------------------------------------------
 
-            ## 5. Running a Node File (Instead of REPL)
+## 5. Running a Node File (Instead of REPL)
 
             Create a file:
 
